@@ -22,7 +22,7 @@ alert(POST["username"]); //if form method is POST
 So, you see how cool it can get right? Please don't forget to give this repo a star ⭐
 
 ## Background
-In this software development journey, one thing I had always wished for in JS is the ability to submit my forms and have HTTP verb variables in JS that enable me to access the form elements' values. Just as I would do in a typical PHP form submit environment with $_GET,  $_POST, etc. 🥰
+In this software development journey, one thing I had always wished for in JS is the ability to submit my forms and have HTTP verb variables that enable me to access the form elements' values. Just as I would do in a typical PHP form submit environment with $_GET,  $_POST, etc. 🥰
 Looking at how this can simplify the form handling process, I decided to bundle a couple of JS codes to achieve this and voila, I guess it is a success😅
 
 ## Getting Started
@@ -33,8 +33,8 @@ To quickly get started using **FormVerb.JS**, follow the below installation inst
 
 ### Using <Script> Tag
 To quickly get **FormVerb.JS** into your project using the <script> tag, kindly follow the below steps, 
-1. Download this repository in a Zip format and extract where your JavaScript files live in your project. 
-Alternatively, you can download the formverb.js file in the **src** folder of this repo and place anywhere in your project. 
+1. Download this repository in a Zip format and extract where your JavaScript files live in your project. *Ensure the folder is named 'FormVerbJS' as it could be 'FormVerbJS - main'*.
+Alternatively, you can download the **formverb.js** file in the **src** folder of this repo and place anywhere in your project. 
 2. Bring in the path to the file in the head section of your HTML file where you will be using it. E.g, 
 ```html
 <script src="js/formverbjs/src/formverb.js"></script>
@@ -43,7 +43,7 @@ Alternatively, you can download the formverb.js file in the **src** folder of th
 
 <script src="path-to-the-file/formverb.js"></script> <!-- If you used the alternative method. -->
 ```
-Congrats, FormVerb.JS is now in your project. Let's get to using it. 
+Congrats, **FormVerb.JS** is now in your project. Let's get to using it. 
 
 ## Your First FormVerb.JS Form
 Now, let's create an HTML form that uses **FormVerb.JS**, 
@@ -67,11 +67,11 @@ alert(POST["password"]);
 ```
 ### Explanation
 1. You include your **FormVerb.JS** library file in the head section of your HTML file using the <script> tag. 
-2. Create a <form> element. Some very important attribute for this <form> element in order for **FormVerb.JS** to work with it are, 
+2. Create an html form element. Some very important attributes for this form element in order for **FormVerb.JS** to work with it are, 
 a. **method**: This specifies the form method and the value can be any of GET, POST, PATCH, PUT, DELETE. 
-b. **action**: The value of this must be **formverbjs** else **FormVerb.JS** won't work with the form element. 
-3. Then, your input elements in the <form> element. Your input element can include <input>, <select>, <textarea>, <progress>, <meter>. **FormVerb.JS** supports practically all HTML5 input types including radio, checkbox, etc.
-**NOTE:** All elements should have at least a **name attribute (preferred)** or **id attribute**. These attributes should be unique except the name attribute for input elements of type radio or checkbox where a set of related radio or checkbox elements must have same name e.g radio elements for gender or checkbox elements for menu-list.
+b. **action**: The value of this must be **formverbjs** else **FormVerb.JS** will assume you don't want it to work with the form element. 
+3. Then, your input elements in the form element. Your input element can include <input>, <select>, <textarea>, <progress>, <meter>. **FormVerb.JS** supports practically all HTML5 input types including radio, checkbox, etc.
+**NOTE:** All elements should have at least a **name attribute (preferred)** or **id attribute**. These attributes should be unique except the name attribute for input elements of type radio or checkbox where ideally, a set of related radio or checkbox elements must have same name e.g radio elements for gender or checkbox elements for menu-list.
 4. Finally, a submit button. This is the button that submits your form when clicked. Whether it is a button or a or span element, the submit button should just have the following attributes for it to work, 
 a. **type**: its value should be "submit".
 b. ** **submit**: this attribute should contain the name or definition of a function to be called when the form submits. For example,
